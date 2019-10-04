@@ -4,7 +4,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page-header .header.panel {
+.page-header .header.panel , .page-header .header-sticky{
     overflow: hidden;
 }
 
@@ -41,41 +41,69 @@
     color: black;
 }
 
+/* header-sticky */
 .header-sticky {
-    display: flex;
-    flex-wrap: wrap;
+    background-color : #C0C0C0;
+    overflow: hidden;
 }
 
-.header-sticky .icon-logo-header {
+.header-sticky .left {
+    float: left;
+    display: block;
+}
+
+.header-sticky .right {
+    float: right;
+    display: block;
+}
+
+.icon-logo-header {
     margin: 5px 10px;
     padding: 0px 13px ;
+
 }
 
+/* category-header */
+.category-header {
+    float: left;
+    overflow: auto;
 
-/* Category-header */
-.header-sticky .category-header {
+    margin-left: 30px;
+
+}
+  
+.category-header .category-header-dropbtn {
+    font-size: 24px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
     display: flex;
     flex-direction: row;
-    max-height: 40px;
-    margin: 17px 10px;
-    padding: 4px 13px ;
+    
+    height: 58px;
 }
-
-.header-sticky .category-header:hover {
-    background-color : red;
+  
+.category-header:hover .category-header-dropbtn {
+    background-color: #D3D3D3	;
 }
-
-
-.header-sticky .dropdown-content{
+  
+.category-header-dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
 
-.header-sticky .dropdown-content a {
+    /* margin-top: 10px; */
+}
+  
+.category-header-dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -83,13 +111,23 @@
     display: block;
     text-align: left;
 }
-
-.header-sticky .dropdown-content a:hover {
-    background-color: #ddd;
+  
+.category-header-dropdown-content a:hover {
+    background-color: #696969;
+    /* color: black; */
+}
+  
+.category-header:hover .category-header-dropdown-content {
+    display: block; 
 }
 
-.header-sticky .category-header:hover .dropdown-content {
-    display: block;
-}
 
+/* showcart-header */
+.header-sticky > .showcart-header {
+    
+}
+.header-sticky > .showcart-header > i{
+    font-size: 28px;
+    margin-top: 16px;
+}
 
