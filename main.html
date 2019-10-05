@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Computer store</title>
-    <link rel="stylesheet" type="text/css" href="./Stylesheets/index-page-style.css">
+    <link rel="stylesheet" type="text/css" href="./Stylesheets/main-page-style.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="./JavaScript/main-page-javascript.js"></script>
 </head>
+
+<script src="./JavaScript/main-page-javascript.js"></script>
+
+<style>
+        
+</style>
 
 <header class="page-header">
     <div class="panel wrapper">
@@ -59,6 +67,67 @@
 </header>
 
 <body>
-    Test 
+
+    <div class="slideshow-container">
+        <div class="mySlides1">
+            <img src="./Promotion_image/Promotion_img_1.jpg" style="width:100%; height: 100%;">
+        </div>
+
+        <div class="mySlides1">
+            <img src="./Promotion_image/Promotion_img_2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+            <img src="./Promotion_image/Promotion_img_3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+            <img src="./Promotion_image/Promotion_img_4.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+    </div>
+          
 </body>
+
+<script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1"]
+    var myIndex = 0;
+    
+    carousel();
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+    }
+
+    function showSlides(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}    
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex[no]-1].style.display = "block";       
+    }
+
+    function carousel(){
+        var i;
+        var x = document.getElementsByClassName("mySlides1");
+        for(i=0; i<x.length; i++){
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 5000); 
+    }
+
+</script>
+
 </html>
