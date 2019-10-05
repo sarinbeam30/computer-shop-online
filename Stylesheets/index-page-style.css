@@ -100,7 +100,7 @@
     box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 
-    /* margin-top: 10px; */
+    margin-top: 1px;
 }
   
 .category-header-dropdown-content a {
@@ -114,7 +114,6 @@
   
 .category-header-dropdown-content a:hover {
     background-color: #696969;
-    /* color: black; */
 }
   
 .category-header:hover .category-header-dropdown-content {
@@ -123,11 +122,89 @@
 
 
 /* showcart-header */
-.header-sticky > .showcart-header {
-    
-}
-.header-sticky > .showcart-header > i{
+.header-sticky  .showcart-header i{
     font-size: 28px;
-    margin-top: 16px;
+    margin: 16px 0px;
+    padding: 0px 14px;
 }
+
+.showcart-header.right:hover{
+    background-color: #D3D3D3;
+}
+
+/* user-header */
+.header-sticky > .user-header i{
+    font-size: 28px;
+    margin: 16px 0px;
+    padding: 0px 14px;
+}
+
+.user-header.right:hover{
+    background-color: #D3D3D3;
+}
+
+/* search-container */
+.header-sticky input[type=text]{
+  padding: 6px;
+  margin-top: 14px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button{
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #ccc;
+}
+
+/* screen-size : 375px */
+@media screen and (max-width : 375px){
+    .panel.wrapper  > .header-sticky > .icon-logo-header {
+        margin : 5px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .header-sticky .showcart-header  i , .header-sticky  .user-header  i{
+        
+        max-width: 40px;
+        font-size: 20px;
+    }
+
+    .header-sticky .showcart-header , .header-sticky .user-header {
+        height: 58px;
+    }
+}
+
+/* screen-size : 375px */
+@media screen and (max-width: 425px){
+    .category-header {
+        margin-left: 0px;
+    }
+
+    .panel.wrapper  > .header-sticky > .icon-logo-header {
+        margin : 5px 0px 5px 8px;
+    }
+}
+
+/* screen-size : 740px */
+@media screen and (max-width: 740px)
+{
+
+    .header-sticky input[type=text]{
+        display: none;
+    }
+
+    .search-container button {
+        display: none;
+    }
+}
+
 
