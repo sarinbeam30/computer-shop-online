@@ -260,7 +260,8 @@ img {
 
 .banner-container > .owl-item > a > img {
   font-size: 2rem;
-  width: 265.59px;
+  width: 300px;
+  height: 150px;
   transform-style: preserve-3d;
 }
 
