@@ -12,7 +12,7 @@
     />
     <link
       rel="stylesheet"
-      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
 
     <script src="./JavaScript/main-page-javascript.js"></script>
@@ -160,7 +160,7 @@
       </div>
     </div>
 
-    <promotion id="promotion"> >>Promotion<< </promotion>
+    <h2 id="promotion">Promotion</h2>
     <br />
     <div class="container-promotion">
       <div class="row">
@@ -213,10 +213,65 @@
       </div>
     </div>
 
-    
+    <h2 id="new-arrival">New Arrival</h2>
+    <div class="new-arrival-container">
+      <div class="owl-item">
+        <a href="#"
+          ><img
+            src="Notebook_image/Dell/Dell-11.6-Inspiron-11-3000-Series-Multi-Touch-2-in-1-Notebook.jpg"
+        /></a>
+        <h5>Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook</h5>
+      </div>
+
+      <div class="owl-item">
+        <a href="#"
+          ><img
+            src="Notebook_image/Dell/Dell-13.3-Inspiron-13-5000-Series-Multi-Touch-2-in-1-Notebook.jpg"
+        /></a>
+        <h5>Dell 13.3 Inspiron-13 5000 Series Multi Touch 2-in-1-Notebook</h5>
+      </div>
+
+      <div class="owl-item">
+        <a href="#"
+          ><img
+            src="Notebook_image/Lenovo/Lenovo-14-IdeaPad-Flex-Pro-Multi-Touch-2-in-1-Laptop-(Platinum).jpg"
+        /></a>
+        <h5>Lenovo 14 IdeaPad Flex Pro Multi Touch 2-in-1 Laptop (Platinum)</h5>
+      </div>
+
+      <div class="owl-item">
+        <a href="#"
+          ><img
+            src="Notebook_image/Microsoft/Microsoft-Surface-Book-2-13.5-Touch-Screen-PixelSense™-2-in-1-Laptop-Intel-Core-i7-16GB-Memory-512GB-SSD- Silver.jpg"
+        /></a>
+        <h5>
+          Microsoft Surface Book 2-13.5 Touch Screen PixelSense™ 2-in-1 Laptop
+        </h5>
+      </div>
+
+      <div class="owl-item">
+        <a href="#"
+          ><img
+            src="Notebook_image/Microsoft/Microsoft-Surface-Pro 6-12.3-Touch-Screen-Intel-Core-i5-8GB-Memory-128GB-Solid-State-Drive-(Latest Model)-Platinum.jpg"
+        /></a>
+        <h5>
+          Microsoft-Surface-Pro 6-12.3 Touch-Screen
+        </h5>
+      </div>
+
+      <div class="owl-item">
+        <a href="#"
+          ><img src="Notebook_image/Dell/Dell-15.6-XPS-15-9570.jpg "
+        /></a>
+        <h5>Dell 15.6 XPS 15 9570</h5>
+      </div>
+    </div>
 
     <script>
       var slideIndex = 1;
+      var myIndex = 0;
+      var style = [10];
+      carousel();
       showSlides(slideIndex);
 
       function plusSlides(n) {
@@ -231,6 +286,11 @@
         var i;
         var slides = document.getElementsByClassName("slides-promotion");
         var dots = document.getElementsByClassName("dot");
+
+        if (n == 0) {
+          slides[slideIndex - 1].style.display = "block";
+        }
+
         if (n > slides.length) {
           slideIndex = 1;
         }
@@ -240,11 +300,24 @@
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
+        // for (i = 0; i < dots.length; i++) {
+        //   dots[i].className = dots[i].className.replace(" active", "");
+        // }
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+        // ßdots[slideIndex - 1].className += " active";
+      }
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slides-promotion");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
       }
     </script>
 
@@ -273,8 +346,8 @@
         for (i = 0; i < x.length; i++) {
           x[i].style.display = "none";
         }
-        
-        if(no !== 1) {
+
+        if (no !== 1) {
           x[slideIndex_slideshow_container[no] - 1].style.display = "block";
         }
       }
@@ -295,66 +368,82 @@
   </body>
 
   <footer>
-      <div class="footer-flex-container">
-        <div class="footer-column1">
-          <ul style="list-style-type: none;">
-            <li><strong>About Us</strong></li>
-            <li><a href="#">Who we are</a></li>
-            <li><a href="#">Terms and consition</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-  
-        <div class="footer-column2">
-          <ul style="list-style-type: none;">
-            <li><strong>Customer Services</strong></li>
-            <li><a href="#">Check Shipping Status</a></li>
-            <li><a href="#">How to register</a></li>
-            <li><a href="#">How to order</a></li>
-            <li><a href="#">Payment Methods</a></li>
-            <li><a href="#">Shipping</a></li>
-          </ul>
-        </div>
-  
-        <div class="footer-column3">
-          <ul style="list-style-type: none;">
-            <li><strong>Customer Services</strong></li>
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Return</a></li>
-            <li><a href="#">Refunds</a></li>
-            <li><a href="#">How to Cancel</a></li>
-            <li><a href="#">Click and collect</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column4">
-          <ul style="list-style-type: none;">
-            <li><strong>Get Our News</strong></li>
-            <li><a href="#">Subscribe to our news today to get exclusive privileges</a></li>
-            
-            <div class="subscribe-footer"> 
-              <form action="">
-                <input type="text" placeholder="Enter your email address" name="email-subscribe" class="custom-input-subscribe"/>
-                <button type="submit" class="custom-button-subscribe"><span>SUBSCRIBE</span></button>
-              </form>
-            </div>
-
-            <div class="social-footer">
-              <h4>Stay Connected</h4>
-              <div class="fb-connect">
-                <a href="#"><img src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"></a>
-                <p style="margin-top: 0;">
-                  <span>
-                    Find us<br>on<a href="#" style="text-decoration: none; margin-left: 4px; color: blue;">Facebook</a>
-                  </span>
-                </p>
-              </div>
-            </div>
-
-          </ul>
-        </div>
+    <div class="footer-flex-container">
+      <div class="footer-column1">
+        <ul style="list-style-type: none;">
+          <li><strong>About Us</strong></li>
+          <li><a href="#">Who we are</a></li>
+          <li><a href="#">Terms and consition</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
-    </footer>
-    
+
+      <div class="footer-column2">
+        <ul style="list-style-type: none;">
+          <li><strong>Customer Services</strong></li>
+          <li><a href="#">Check Shipping Status</a></li>
+          <li><a href="#">How to register</a></li>
+          <li><a href="#">How to order</a></li>
+          <li><a href="#">Payment Methods</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column3">
+        <ul style="list-style-type: none;">
+          <li><strong>Customer Services</strong></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Return</a></li>
+          <li><a href="#">Refunds</a></li>
+          <li><a href="#">How to Cancel</a></li>
+          <li><a href="#">Click and collect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column4">
+        <ul style="list-style-type: none;">
+          <li><strong>Get Our News</strong></li>
+          <li>
+            <a href="#"
+              >Subscribe to our news today to get exclusive privileges</a
+            >
+          </li>
+
+          <div class="subscribe-footer">
+            <form action="">
+              <input
+                type="text"
+                placeholder="Enter your email address"
+                name="email-subscribe"
+                class="custom-input-subscribe"
+              />
+              <button type="submit" class="custom-button-subscribe">
+                <span>SUBSCRIBE</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="social-footer">
+            <h4>Stay Connected</h4>
+            <div class="fb-connect">
+              <a href="#"
+                ><img
+                  src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
+              /></a>
+              <p style="margin-top: 0;">
+                <span>
+                  Find us<br />on<a
+                    href="#"
+                    style="text-decoration: none; margin-left: 4px; color: blue;"
+                    >Facebook</a
+                  >
+                </span>
+              </p>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </html>
