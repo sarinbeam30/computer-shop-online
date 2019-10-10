@@ -14,11 +14,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
-
-    <script src="./JavaScript/main-page-javascript.js"></script>
   </head>
-
-  <script src="./JavaScript/main-page-javascript.js"></script>
 
   <header class="page-header">
     <div class="panel wrapper">
@@ -165,7 +161,7 @@
     <div class="container-promotion">
       <div class="row">
         <div class="slideshow-container-promotion">
-          <div class="slides-promotion">
+          <div class="slides-promotion fade">
             <img
               src="Notebook_image/Apple/apple-2017.jpg"
               class="image-promotion"
@@ -174,7 +170,7 @@
               margin-right: auto;"
             />
           </div>
-          <div class="slides-promotion">
+          <div class="slides-promotion fade">
             <img
               src="Notebook_image/Apple/apple-2018-retina.jpg"
               class="image-promotion"
@@ -183,7 +179,7 @@
               margin-right: auto;"
             />
           </div>
-          <div class="slides-promotion">
+          <div class="slides-promotion fade">
             <img
               src="Notebook_image/Apple/apple-2018.jpg"
               class="image-promotion"
@@ -265,106 +261,13 @@
         /></a>
         <h5>Dell 15.6 XPS 15 9570</h5>
       </div>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
-
-    <script>
-      var slideIndex = 1;
-      var myIndex = 0;
-      var style = [10];
-      carousel();
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("slides-promotion");
-        var dots = document.getElementsByClassName("dot");
-
-        if (n == 0) {
-          slides[slideIndex - 1].style.display = "block";
-        }
-
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        // for (i = 0; i < dots.length; i++) {
-        //   dots[i].className = dots[i].className.replace(" active", "");
-        // }
-        slides[slideIndex - 1].style.display = "block";
-        // ßdots[slideIndex - 1].className += " active";
-      }
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("slides-promotion");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-          myIndex = 1;
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000);
-      }
-    </script>
-
-    <script>
-      var slideIndex_slideshow_container = [1, 1];
-      var slideId = ["mySlides_slideshow_beam"];
-      var myIndex = 0;
-      carousel();
-      showSlides_slideshow_beam(1, 0);
-      showSlides_slideshow_beam(1, 1);
-      function plusSlides_slideshow_container(n, no) {
-        showSlides_slideshow_beam(
-          (slideIndex_slideshow_container[no] += n),
-          no
-        );
-      }
-      function showSlides_slideshow_beam(n, no) {
-        var i;
-        var x = document.getElementsByClassName(slideId[no]);
-        if (n > x.length) {
-          slideIndex_slideshow_container[no] = 1;
-        }
-        if (n < 1) {
-          slideIndex_slideshow_container[no] = x.length;
-        }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-
-        if (no !== 1) {
-          x[slideIndex_slideshow_container[no] - 1].style.display = "block";
-        }
-      }
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides_slideshow_beam");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-          myIndex = 1;
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000);
-      }
-    </script>
   </body>
 
   <footer>
@@ -446,4 +349,8 @@
       </div>
     </div>
   </footer>
+  <script
+    type="text/javascript"
+    src="JavaScript/main-page-javascript.js"
+  ></script>
 </html>
