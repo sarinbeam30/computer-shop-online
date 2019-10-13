@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Customer Login</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -36,20 +36,23 @@
           </ul>
         </div>
         <ul class="header links">
-          <li><a href="#" target="_blank">Login</a></li>
-          <li><a href="#" target="_blank">Register</a></li>
+          <li><a href="login-page.html">Login</a></li>
+          <li><a href="register-page.html">Register</a></li>
           <li><a href="#" target="_blank">Tracking status</a></li>
         </ul>
       </div>
 
       <div class="header-sticky" id="header-sticky">
         <div class="icon-logo-header left">
-          <img
-            alt="icon"
-            src="./Icon_image/laptop.png"
-            width="100"
-            height="45"
-          />
+          <a href="main.html">
+            <img
+              alt="icon"
+              src="./Icon_image/laptop.png"
+              width="100"
+              height="45"
+            />
+          </a>
+          
         </div>
 
         <div class="category-header left">
@@ -83,6 +86,224 @@
     </div>
 </header>
 <body>
-    
+
+  <breadcrumbs class="breadcrumbs">
+    <ul class="items" style="list-style: none;">
+      <li class="item-Home">
+        <a href="main.html" title="main" style="text-decoration: none; color: black;">Home</a>
+      </li>
+      <li class="item-Login" style="margin-left: 5px;">
+        <strong>Login</strong>
+      </li>
+    </ul>
+  </breadcrumbs>
+
+  <div class="login-part">
+    <div class="left-column login-part-container">
+      <h3><span>LOGIN</span></h3>
+      <p>Welcome to Computer store</p>
+
+      <form accept="//">
+        <!-- EMAIL -->
+        <label class="label">
+          <span>Email</span>
+        </label>
+        <input type="email" id="email" name="email">
+
+        <!-- PASSWORD -->
+        <label class="label">
+          <span>Password</span>
+        </label>
+        <input type="password" id="password" name="password" style="margin-bottom: 50px;">
+
+      </form>
+
+      <div class="actions-toolbar">
+        <a href="#" class="sign-in-button">
+          <span>Sign in</span>
+        </a> 
+      </div>
+
+    </div>
+    <div class="right-column block-new-customer">
+      <div class="block-content">
+        
+        <h3>
+          <span>NOT A MEMBER YET? REGISTER NOW.</span>
+        </h3>
+        <p class="new-customer-msg">
+          Creating an account has many benefits: check out faster, keep more than one address, track orders and more.
+        </p>
+        <div class="actions-toolbar">
+          <a href="#" class="create-an-account-button">
+            <span>Create an account</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
 </body>
+<footer>
+  <div class="footer-flex-container">
+    <div class="footer-column1">
+      <ul style="list-style-type: none;">
+        <li><strong>About Us</strong></li>
+        <li><a href="#">Who we are</a></li>
+        <li><a href="#">Terms and consition</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column2">
+      <ul style="list-style-type: none;">
+        <li><strong>Customer Services</strong></li>
+        <li><a href="#">Check Shipping Status</a></li>
+        <li><a href="#">How to register</a></li>
+        <li><a href="#">How to order</a></li>
+        <li><a href="#">Payment Methods</a></li>
+        <li><a href="#">Shipping</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column3">
+      <ul style="list-style-type: none;">
+        <li><strong>Customer Services</strong></li>
+        <li><a href="#">Warranty</a></li>
+        <li><a href="#">Return</a></li>
+        <li><a href="#">Refunds</a></li>
+        <li><a href="#">How to Cancel</a></li>
+        <li><a href="#">Click and collect</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column4">
+      <ul style="list-style-type: none;">
+        <li><strong>Get Our News</strong></li>
+        <li>
+          <a href="#"
+            >Subscribe to our news today to get exclusive privileges</a
+          >
+        </li>
+
+        <div class="subscribe-footer">
+          <form action="">
+            <input
+              type="text"
+              placeholder="Enter your email address"
+              name="email-subscribe"
+              class="custom-input-subscribe"
+            />
+            <button type="submit" class="custom-button-subscribe">
+              <span>SUBSCRIBE</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="social-footer">
+          <h4>Stay Connected</h4>
+          <div class="fb-connect">
+            <a href="#"
+              ><img
+                src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
+            /></a>
+            <p style="margin-top: 0;">
+              <span>
+                Find us<br />on<a
+                  href="#"
+                  style="text-decoration: none; margin-left: 4px; color: blue;"
+                  >Facebook</a
+                >
+              </span>
+            </p>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-flex-container-mobile-version">
+      <button class="footer-collapsible-button">About Us</button>
+      <div class="footer-collapsible-content">
+        <ul style="list-style-type: none;">
+          <li><a href="#">Who we are</a></li>
+          <li><a href="#">Terms and condition</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <button class="footer-collapsible-button">Customer Services</button>
+      <div class="footer-collapsible-content">
+        <ul style="list-style-type: none;">
+          <li><a href="#">Check Shipping Status</a></li>
+          <li><a href="#">How to register</a></li>
+          <li><a href="#">How to order</a></li>
+          <li><a href="#">Payment Methods</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+
+      <button class="footer-collapsible-button">Customer Services</button>
+      <div class="footer-collapsible-content">
+        <ul style="list-style-type: none;">
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Return</a></li>
+          <li><a href="#">Refunds</a></li>
+          <li><a href="#">How to Cancel</a></li>
+          <li><a href="#">Click and collect</a></li>
+        </ul>
+      </div>
+
+      <div class="subscribe-form-and-stay-connected">
+        <ul style="list-style-type: none;">
+          <li><strong>Get Our News</strong></li>
+          <li>
+            <a href="#"
+              >Subscribe to our news today to get exclusive privileges</a
+            >
+          </li>
+
+          <div class="subscribe-footer">
+            <form action="">
+              <input
+                type="text"
+                placeholder="Enter your email address"
+                name="email-subscribe"
+                class="custom-input-subscribe"
+              />
+              <button type="submit" class="custom-button-subscribe">
+                <span>SUBSCRIBE</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="social-footer">
+            <h4>Stay Connected</h4>
+            <div class="fb-connect">
+              <a href="#"
+                ><img
+                  src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
+              /></a>
+              <p style="margin-top: 0;">
+                <span>
+                  Find us<br />on<a
+                    href="#"
+                    style="text-decoration: none; margin-left: 4px; color: blue;"
+                    >Facebook</a
+                  >
+                </span>
+              </p>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+</footer>
+<script
+  type="text/javascript"
+  src="JavaScript/login-page-javascript.js"
+></script>
 </html>

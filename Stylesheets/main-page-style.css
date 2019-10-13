@@ -316,10 +316,18 @@ img {
     width: 180px;
   }
 
+  .panel.header > .header-top-links > ul {
+    font-size: 11.5px;
+  }
+
+  .panel.header > .header.links > li {
+    font-size: 11.5px;
+  }
+
 }
 
 /* screen-size : 425px */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .category-header {
     margin-left: 0px;
   }
@@ -328,6 +336,16 @@ img {
     margin: 5px 0px 5px 8px;
   }
 
+}
+
+@media screen and (max-width: 430px) and (min-width: 376px) {
+  .panel.header > .header-top-links > ul {
+    font-size: 13.5px;
+  }
+
+  .panel.header > .header.links > li {
+    font-size: 13.5px;
+  }
 }
 
 /* screen-size : 740px */

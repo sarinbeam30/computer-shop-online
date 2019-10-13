@@ -17,3 +17,20 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
  
 }
+
+//----------------------------- Function Footer's collapsible --------------------------------------------
+var collapsible_footer = document.getElementsByClassName("footer-collapsible-button");
+var collapsible_footer_n;
+
+for(collapsible_footer_n = 0; collapsible_footer_n < collapsible_footer.length; collapsible_footer_n ++){
+  collapsible_footer[collapsible_footer_n].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var collapsible_footer_content = this.nextElementSibling;
+
+    if(collapsible_footer_content.style.maxHeight) {
+      collapsible_footer_content.style.maxHeight = null;
+    } else {
+      collapsible_footer_content.style.maxHeight = collapsible_footer_content.scrollHeight + "px";
+    }
+  });
+}
