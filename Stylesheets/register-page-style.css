@@ -141,6 +141,12 @@ input[type=password], input[type=email], input[type=tel]{
     text-decoration: none;
     color: #fff;
     cursor: pointer;
+
+    
+}
+
+.account-create-container .actions-toolbar {
+    margin-bottom: 40px;
 }
 
 /* ------------------------- Mobile_version  ------------------------------- */
@@ -158,8 +164,16 @@ input[type=password], input[type=email], input[type=tel]{
         width: 100%;
     }
 
+    .account-create-container .actions-toolbar {
+        margin-bottom: 0px;
+    }
+
     .account-create-container .actions-toolbar a {
         width: inherit;
+    }
+
+    .block-content-mobile-version {
+        margin-top: 20px;
     }
 }
 
