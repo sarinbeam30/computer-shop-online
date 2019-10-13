@@ -13,10 +13,20 @@ h5 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page-header .header.panel,
+.page-header .header.panel,  
 .page-header .header-sticky {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
+
+.page-header .header.panel {
+  display: block;
+  transition: top 0.3s;
+}
+
 
 .panel.header > .header-top-links {
   float: left;
@@ -53,8 +63,9 @@ h5 {
 /* header-sticky */
 .header-sticky {
   /* background-color: #c0c0c0; */
-  background-color: #dcdcdc;
+  background-color: whitesmoke;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .header-sticky .left {
@@ -93,7 +104,7 @@ h5 {
   display: flex;
   flex-direction: row;
 
-  height: 58px;
+  height: 60px;
 }
 
 .category-header:hover .category-header-dropbtn {
@@ -102,8 +113,8 @@ h5 {
 }
 
 .category-header-dropdown-content {
-  display: none;
-  position: absolute;
+  display : none;
+  position: fixed;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.2);
@@ -127,6 +138,7 @@ h5 {
 
 .category-header:hover .category-header-dropdown-content {
   display: block;
+  /* background-color: red; */
 }
 
 /* showcart-header */
@@ -215,7 +227,7 @@ img {
 .slideshow-container {
   max-width: 3000px;
   position: relative;
-  margin: 30px auto auto auto;
+  margin: 90px auto auto auto;
 }
 
 /* Next & previous buttons */
@@ -536,9 +548,6 @@ body {
   border: none;
   min-width: 125px;
   cursor: pointer;
-}
-
-.social-footer {
 }
 
 .fb-connect {

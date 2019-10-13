@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create New Customer Account</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./Stylesheets/main-page-style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link 
+        rel="stylesheet"
+        type="text/css"
+        href="./Stylesheets/register-page-style.css"
+    />
+</head>
+<header class="page-header">
+    <div class="panel wrapper">
+      <div class="panel header" id="panel-header-hide-menu-on-scroll">
+        <div class="header-top-links">
+          <ul>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                style="text-decoration: none; color: black;"
+                >Computer store</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="header links">
+          <li><a href="#" target="_blank">Login</a></li>
+          <li><a href="#" target="_blank">Register</a></li>
+          <li><a href="#" target="_blank">Tracking status</a></li>
+        </ul>
+      </div>
+
+      <div class="header-sticky" id="header-sticky">
+        <div class="icon-logo-header left">
+          <img
+            alt="icon"
+            src="./Icon_image/laptop.png"
+            width="100"
+            height="45"
+          />
+        </div>
+
+        <div class="category-header left">
+          <button class="category-header-dropbtn">
+            <i
+              class="fas fa-bars"
+              style="padding-right: 8px; margin-top: 3.20px;"
+            ></i>
+            <p style="margin: 0px;">Category</p>
+          </button>
+          <div class="category-header-dropdown-content">
+            <a href="#">Notebook</a>
+            <a href="#">Smartphone</a>
+            <a href="#">Tablet</a>
+          </div>
+        </div>
+
+        <div class="showcart-header right">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div class="user-header right">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="search-container right">
+          <form action="">
+            <input type="text" placeholder="Search..." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+</header>
+<body>
+    
+    <breadcrumbs class="breadcrumbs">
+        <ul class="items" style="list-style: none;">
+            <li class="item-Home">
+                <a href="main.html" title="main" style="text-decoration: none; color: black;">Home</a>
+            </li>
+            <li class="item-Signup" style="margin-left: 5px;">
+                <strong>Signup</strong>
+            </li>
+        </ul>
+    </breadcrumbs>
+
+    <div class="register-part">
+      <div class="left-column account-create-container">
+        <h3><span>REGISTER</span></h3>
+        <p>Welcome to Computer store</p>
+
+        <form action="//">
+          <!-- FIRSTNAME -->
+          <label class="label" for="firstname">
+            <span>First Name</span>
+          </label>
+          <input type="text" id="firstname" name="firstname">
+
+          <!-- LASTNAME -->
+          <label class="label" for="lastname">
+            <span>Last Name</span>
+          </label>
+          <input type="text" id="lastname" name="lastname" style="margin-bottom: 30px;" class="input-text required-entry" data-validate="{required:true" aria-required="true">
+
+          <!-- EMAIL -->
+          <label class="label">
+            <span>Email</span>
+          </label>
+          <input type="email" id="email" name="email">
+
+          <!-- PASSWORD -->
+          <label class="label">
+            <span>Password</span>
+          </label>
+          <input type="password" id="password" name="password">
+
+          <!-- CONFIRM_PASSWORD -->
+          <label class="label">
+            <span>Confirm passowrd</span>
+          </label>
+          <input type="password" id="confirm-password" name="confirm-password">
+
+          <!-- MOBILE_NUMBER -->
+          <label class="label">
+            <span>Mobile Number</span>
+          </label>
+          <input type="tel" id="mobile-number" name="mobile-number" style="margin-bottom: 50px;">
+
+          <div class="actions-toolbar">
+            <a href="#" class="create-an-account-button">
+              <span>Create an account</span>
+            </a>
+          </div>
+
+          <div class="block-content-mobile-version">
+            <h4>Already A Member?</h4>
+            <a href="#" style="text-decoration: none; color: blue;">
+              <span>Log in</span>
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="right-column block-already-customer">
+        <div class="block-content">
+          <h3>
+            <span>ALREADY A MEMBER ?</span>
+          </h3>
+          <p class="already-member-msg">
+            Customers can log in here. Get information on benefits. And special promotions before anyone. Have fun shopping for IT products online everyday
+          </p>
+          <div class="actions-toolbar">
+            <a href="#" class="login-button">
+              <span>Log in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</body>
+</html>
