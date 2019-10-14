@@ -16,9 +16,6 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("slides-promotion");
   var dots = document.getElementsByClassName("dot");
 
-  // if (n !== 0) {
-  //   slides[slideIndex - 1].style.display = "block";
-  // }
 
   if (n > slides.length) {
     slideIndex = 1;
