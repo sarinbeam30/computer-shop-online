@@ -60,3 +60,32 @@ output_left_price_slider.innerHTML = left_price_slider.value;
 left_price_slider.oninput = function() {
   output_left_price_slider.innerHTML = this.value;
 }
+
+
+//----------------------------- Function Promotion-image-slider --------------------------------------------------
+var slideIndex_promotion_image_slider = 1;
+promotion_slider_showSlides(slideIndex_promotion_image_slider);
+
+function promotion_slider_plus_slides(n) {
+  promotion_slider_showSlides(slideIndex_promotion_image_slider += n);
+}
+
+function promotion_slider_current_slides(n) {
+  promotion_slider_showSlides(slideIndex_promotion_image_slider = n);
+}
+
+function promotion_slider_showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("image-promotion-slider");
+  var dots = document.getElementsByClassName("promotion-slider-dot");
+  if (n > slides.length) {slideIndex_promotion_image_slider = 1}    
+  if (n < 1) {slideIndex_promotion_image_slider = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex_promotion_image_slider-1].style.display = "block";  
+  dots[slideIndex_promotion_image_slider-1].className += " active";
+}

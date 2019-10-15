@@ -33,7 +33,7 @@ body {
 
 /* ---------------------------- Sidebar_main --------------------------- */
 .promotion-page-column-flex  .sidebar-main {
-    flex: 2.5;
+    flex: 0 0 25%;
     margin: 0px 20px 0px 23px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -134,5 +134,88 @@ span#left-slider-value {
 
 /* ---------------------------- Column_main --------------------------- */
 .promotion-page-column-flex  .column-main {
-    flex: 8;
+    flex: 8 ;
 }
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* ---------------------------- Promotion_image_slider --------------------------- */
+* {box-sizing: border-box}
+.promotion-slideshow-container .image-promotion-slider {display: none;}
+img {vertical-align: middle;}
+
+.column-main h1 {
+    font-family: Arial, Helvetica, sans-serif; 
+    text-transform: uppercase; 
+    margin-top: 0px;
+}
+
+.column-main > .promotion-slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.column-main  > .promotion-slider-prev , .column-main .promotion-slider-next {
+    cursor: pointer;
+    position: absolute;
+    top: 19%;
+    /* top: 50%; */
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+    /* background-color: red; */
+}
+
+.column-main .promotion-slider-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.column-main .promotion-slider-prev:hover , .column-main .promotion-slider-next:hover {
+    background-color: rgba(0,0,0,0.8);
+} 
+
+.promotion-slider-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+}
+
+.active, .promotion-slider-dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
