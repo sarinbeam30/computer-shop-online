@@ -112,7 +112,6 @@ window.onscroll = function() {
   }
 
   prevScrollpos = currentScrollPos;
- 
 }
 
 //----------------------------- Function Footer's collapsible --------------------------------------------

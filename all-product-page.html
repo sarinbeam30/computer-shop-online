@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Computer store</title>
+    <title>Product Page</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="./Stylesheets/main-page-style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./Stylesheets/all-product-page-style.css"
     />
     <link
       rel="stylesheet"
@@ -34,7 +39,7 @@
         <ul class="header links">
           <li><a href="login-page.html">Login</a></li>
           <li><a href="register-page.html">Register</a></li>
-          <li><a href="#">Tracking status</a></li>
+          <li><a href="#" target="_blank">Tracking status</a></li>
         </ul>
       </div>
 
@@ -59,14 +64,15 @@
             <p style="margin: 0px;">Category</p>
           </button>
           <div class="category-header-dropdown-content">
-            <a href="all-product-page.html">Notebook</a>
+            <a href="#">Notebook</a>
             <a href="#">Smartphone</a>
             <a href="#">Tablet</a>
           </div>
         </div>
 
-        <div class="showcart-header right">
-          <i class="fas fa-shopping-cart"></i>
+        
+        <div class="showcart-header right" id = "showcart">
+          <i class="fas fa-shopping-cart" ><a href=""></a></i>
         </div>
         <div class="user-header right">
           <i class="fas fa-user"></i>
@@ -82,255 +88,183 @@
   </header>
 
   <body>
-    <div class="slideshow-container">
-      <div class="mySlides_slideshow_beam fade">
+    <div class="promotion-page-column-flex">
+      <div class="sidebar-main column">
+        <div class="block-content">
+          <button type="button" class="sidebar-collapsible-btn">
+            Category
+          </button>
+          <div class="collapsible-content category">
+            <p class="category-p">
+              <input type="radio" name="category" value="all-product" />All
+              Products <br />
+              <input type="radio" name="category" value="new-arrival" />New
+              Arrival <br />
+              <input type="radio" name="category" value="best-seller" />Best
+              Seller <br />
+            </p>
+          </div>
+          <button type="button" class="sidebar-collapsible-btn">Price</button>
+          <div class="collapsible-content range-slider">
+            <div class="left-slidecontainer">
+              <input
+                type="range"
+                min="80"
+                max="118900"
+                value="1000"
+                class="left-price-slider"
+                id="left-price-slider-id"
+              />
+              <p>Value : <span id="left-slider-value"></span></p>
+            </div>
+          </div>
+          <button type="button" class="sidebar-collapsible-btn">Brand</button>
+          <div class="collapsible-content brand">
+            <p class="brand-filter-p">
+              <li style="list-style: none; margin-bottom: 10px;">
+                <input type="checkbox" name="brand" value="apple" />Apple
+              </li>
+              <li style="list-style: none; margin-bottom: 10px;">
+                <input type="checkbox" name="brand" value="dell" />Dell
+              </li>
+              <li style="list-style: none; margin-bottom: 10px;">
+                <input type="checkbox" name="brand" value="lenovo" />Lenovo
+              </li>
+              <li style="list-style: none; margin-bottom: 10px;">
+                <input
+                  type="checkbox"
+                  name="brand"
+                  value="microsoft"
+                />Microsoft
+              </li>
+              <li style="list-style: none; margin-bottom: 10px;">
+                <input type="checkbox" name="brand" value="razer" />Razer
+              </li>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-main column">
+
+        <div>
+          <h2 style="margin: 0">Notebook sale</h2>
+          <img
+            src="Promotion_image/Promotion_img_3.jpg"
+            style="width: 100%; height: 200px; margin-left: -10px;"
+          />
+        </div>
+
+        <div class="card product-box" ">
         <img
-          src="./Promotion_image/Promotion_img_1.jpg"
-          style="width:100%; height: 100%;"
+          src="Notebook_image/Apple/apple-2018-retina.jpg"
         />
+        <h5>
+          Apple 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook
+        </h5>
+        <h5 style="float: left">
+          18,000
+        </h5>
+        <h5 style="float: right;">
+          BATH
+        </h5>
       </div>
-
-      <div class="mySlides_slideshow_beam fade">
-        <img src="./Promotion_image/Promotion_img_2.jpg" style="width:100%" />
+      <div class="card product-box">
+        <img
+          src="Notebook_image/Razer/Razer-Blade-Pro-17.3-4K-Ultra-HD-Touch-Screen-Gaming-Laptop-Intel-Core-i7-32GB-Memory-NVIDIA-GeForce-GTX-1080-1TB-SSD-Black-CNC-Aluminum.jpg"
+        />
+        <h5>
+          Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook
+        </h5>
+        <h5 style="float: left">
+          18,000
+        </h5>
+        <h5 style="float: right;">
+          BATH
+        </h5>
       </div>
-
-      <div class="mySlides_slideshow_beam fade">
-        <img src="./Promotion_image/Promotion_img_3.jpg" style="width:100%" />
+      <div class="card product-box">
+        <img
+          src="Notebook_image/Dell/Dell-11.6-Inspiron-11-3000-Series-Multi-Touch-2-in-1-Notebook.jpg"
+        />
+        <h5>
+          Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook
+        </h5>
+        <h5 style="float: left">
+          18,000
+        </h5>
+        <h5 style="float: right;">
+          BATH
+        </h5>
       </div>
-
-      <div class="mySlides_slideshow_beam fade">
-        <img src="./Promotion_image/Promotion_img_4.jpg" style="width:100%" />
+      <div class="card product-box">
+        <img
+          src="Notebook_image/Lenovo/Lenovo-15.6-IdeaPad-330s.jpg"
+        />
+        <h5>
+          Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook
+        </h5>
+        <h5 style="float: left">
+          18,000
+        </h5>
+        <h5 style="float: right;">
+          BATH
+        </h5>
       </div>
-
-      <a
-        class="prev_slideshow_container"
-        onclick="plusSlides_slideshow_container(-1, 0)"
-        >&#10094;</a
-      >
-      <a
-        class="next_slideshow_container"
-        onclick="plusSlides_slideshow_container(1, 0)"
-        >&#10095;</a
-      >
-    </div>
-
-    <div class="banner-container">
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-01.jpg"
-        /></a>
+      <div class="card product-box">
+        <img
+          src="Notebook_image/Apple/apple-2019-retina.jpg"
+        />
+        <h5>
+          Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook
+        </h5>
+        <h5 style="float: left">
+          18,000
+        </h5>
+        <h5 style="float: right;">
+          BATH
+        </h5>
       </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-02.jpg"
-        /></a>
-      </div>
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-03.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-04.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/notebook-top20-banner-400px-2.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-05.jpg"
-        /></a>
-      </div>
-    </div>
-
-    <h1 id="promotion">
-      <a
-        href="promotion-page.html"
-        style="text-decoration: none; color: black; cursor: pointer;"
-        >Promotion</a
-      >
-    </h1>
-    <div class="line"></div>
-    <br />
-    <div class="container-promotion" style="text-align: center;">
-      <div class="row">
-        <div class="slideshow-container-promotion">
-          <h3 class="promotion-tag">GOLDEN TIME</h3>
-          <div class="slides-promotion fade">
-            <img
-              src="Notebook_image/Apple/apple-2017.jpg"
-              class="image-promotion"
-              style="width: 80%; display: block;
-              margin-left: auto;
-              margin-right: auto;"
-            />
-          </div>
-          <div class="slides-promotion fade">
-            <img
-              src="Notebook_image/Apple/apple-2018-retina.jpg"
-              class="image-promotion"
-              style="width: 80%; display: block;
-              margin-left: auto;
-              margin-right: auto;"
-            />
-          </div>
-          <div class="slides-promotion fade">
-            <img
-              src="Notebook_image/Apple/apple-2018.jpg"
-              class="image-promotion"
-              style="width: 80%; display: block;
-              margin-left: auto;
-              margin-right: auto;"
-            />
-          </div>
-
-          <a class="prev-promotion" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next-promotion" onclick="plusSlides(1)">&#10095;</a>
-          <div class="container-dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>
-
-        <div class="column-right">
-          <img
-            src="Promotion_image/gaming-notebook-banner.jpg"
-            class="image-promotion"
-          />
-          <img
-            src="Promotion_image/surface-banner-hl-3.jpg"
-            class="image-promotion"
-          />
-          <img
-            src="Promotion_image/apple-shop-banner-aug.jpg"
-            class="image-promotion"
-            style="width: 82%;"
-          />
+      <div class="card product-box">
+        <img
+          src="Notebook_image/Microsoft/Microsoft-Surface-Laptop-2-13.5-Touch-Screen-Intel-Core-i7-8GB-Memory-256GB-Solid-State-Drive-Cobalt-Blue.jpg"
+        />
+        <h5>
+          Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook
+        </h5>
+        <h5 style="float: left">
+          18,000
+        </h5>
+        <h5 style="float: right;">
+          BATH
+        </h5>
         </div>
       </div>
     </div>
 
-    <h1 id="new-arrival">New Arrival</h1>
-    <div class="line"></div>
-    <div class="new-arrival-container">
-      <div class="card">
-        <div class="owl-item">
-          <a href="#"
-            ><img
-              src="Notebook_image/Dell/Dell-11.6-Inspiron-11-3000-Series-Multi-Touch-2-in-1-Notebook.jpg"
-          /></a>
-          <h5>Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook</h5>
-          <h5 style="float: left">
-            18,000
-          </h5>
-          <h5 style="float: right;">
-            BATH
-          </h5>
-        </div>
-      </div>
+    <!-- ------------------------- Modal ------------------------------- -->
+    <div id="cart" class="modal">
 
-      <div class="card">
-        <div class="owl-item">
-          <a href="product-detail-page.html"
-            ><img
-              src="Notebook_image/Dell/Dell-13.3-Inspiron-13-5000-Series-Multi-Touch-2-in-1-Notebook.jpg"
-          /></a>
-          <h5>Dell 13.3 Inspiron-13 5000 Series Multi Touch 2-in-1-Notebook</h5>
-          <h5 style="float: left">
-            40,000
-          </h5>
-          <h5 style="float: right;">
-            BATH
-          </h5>
-        </div>
-      </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>CART</h2>
+          </div>
+          <div class="modal-body">
+              <div class="card product-item">
+                <div>
+                  <img style = "width: 50%; height: 70%;" src="Notebook_image/Dell/Dell-13.3-Inspiron-13-5000-Series-Multi-Touch-2-in-1-Notebook.jpg">
+                  <h3>Dell 11.6 Inspiron-11 3000 Series Multi Touch 2-in-1 Notebook</h3>
+                  <h3 style = "float: right;">25000 BATH</h3>
+                </div>
 
-      <div class="card">
-        <div class="owl-item">
-          <a href="#"
-            ><img
-              src="Notebook_image/Lenovo/Lenovo-14-IdeaPad-Flex-Pro-Multi-Touch-2-in-1-Laptop-(Platinum).jpg"
-          /></a>
-          <h5>
-            Lenovo 14 IdeaPad Flex Pro Multi Touch 2-in-1 Laptop (Platinum)
-          </h5>
-          <h5 style="float: left">
-            55,000
-          </h5>
-          <h5 style="float: right;">
-            BATH
-          </h5>
+              </div>
+          </div>
         </div>
-      </div>
+      
+      
 
-      <div class="card">
-        <div class="owl-item">
-          <a href="#"
-            ><img
-              src="Notebook_image/Microsoft/Microsoft-Surface-Book-2-13.5-Touch-Screen-PixelSense™-2-in-1-Laptop-Intel-Core-i7-16GB-Memory-512GB-SSD- Silver.jpg"
-          /></a>
-          <h5>
-            Microsoft Surface Book 2-13.5 Touch Screen PixelSense™ 2-in-1 Laptop
-          </h5>
-          <h5 style="float: left">
-            75,000
-          </h5>
-          <h5 style="float: right;">
-            BATH
-          </h5>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="owl-item">
-          <a href="#"
-            ><img
-              src="Notebook_image/Microsoft/Microsoft-Surface-Pro 6-12.3-Touch-Screen-Intel-Core-i5-8GB-Memory-128GB-Solid-State-Drive-(Latest Model)-Platinum.jpg"
-          /></a>
-          <h5>
-            Microsoft-Surface-Pro 6-12.3 Touch-Screen
-          </h5>
-          <br />
-          <h5 style="float: left">
-            27,500
-          </h5>
-          <h5 style="float: right;">
-            BATH
-          </h5>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="owl-item">
-          <a href="#"
-            ><img src="Notebook_image/Dell/Dell-15.6-XPS-15-9570.jpg "
-          /></a>
-          <h5>Dell 15.6 XPS 15 9570</h5>
-          <br />
-          <h5 style="float: left">
-            35,000
-          </h5>
-          <h5 style="float: right;">
-            BATH
-          </h5>
-        </div>
-      </div>
-    </div>
   </body>
 
   <footer>
@@ -490,8 +424,5 @@
       </div>
     </div>
   </footer>
-  <script
-    type="text/javascript"
-    src="JavaScript/main-page-javascript.js"
-  ></script>
+  <script type="text/javascript" src="JavaScript/all-product-page.js"></script>
 </html>
