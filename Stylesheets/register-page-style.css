@@ -152,6 +152,13 @@ input[type=password], input[type=email], input[type=tel]{
 }
 
 /* ------------------------- Mobile_version  ------------------------------- */
+
+@media screen and(max-width : 374px) and (min-width : 0px) {
+    .account-create-container .actions-toolbar a {
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width: 770px) {
     .block-already-customer {
         display: none;
@@ -177,6 +184,10 @@ input[type=password], input[type=email], input[type=tel]{
     .block-content-mobile-version {
         margin-top: 20px;
     }
+
+    .account-create-container .actions-toolbar a {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 771px) {
@@ -184,3 +195,4 @@ input[type=password], input[type=email], input[type=tel]{
         display: none;
     }
 }
+

@@ -1,4 +1,4 @@
-body{
+body {
     margin-top: 120px;
 }
 
@@ -24,6 +24,48 @@ body{
     content: " /";  
     font-weight: bold;
 }
+
+/* ---------------------------- Block_new_customer_heading_mobile --------------------------- */
+
+.block-new-customer-heading-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    line-height: 1.42857143;
+    color: #4a4a4a;
+}
+
+.block-new-customer-heading-mobile a {
+    background: 0 0;
+    border: solid 1px #0b5b96;
+    border-radius: 4px;
+    color: #0b5b96;
+    padding: 4px 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.block-new-customer-heading-mobile p {
+    margin: 5.75px 0px;
+}
+
+.login-part .login-horizontal-line-mobile {
+    color: #4a4a4a;
+    font-weight:100;
+    margin-bottom: 30px;
+}
+
+
 
 /* ---------------------------- Login-part --------------------------- */
 
@@ -143,6 +185,20 @@ body{
 
     .login-part .login-part-container form input {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 771px) {
+    .block-new-customer-heading-mobile , 
+    .login-horizontal-line-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .block-new-customer-heading-mobile a,
+    .block-new-customer-heading-mobile p {
+        font-size: 13px;
     }
 }
 
