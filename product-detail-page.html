@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Computer store</title>
+    <title>Computer Detail</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="./Stylesheets/main-page-style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./Stylesheets/product-detail-page-style.css"
     />
     <link
       rel="stylesheet"
@@ -34,7 +39,7 @@
         <ul class="header links">
           <li><a href="login-page.html">Login</a></li>
           <li><a href="register-page.html">Register</a></li>
-          <li><a href="#">Tracking status</a></li>
+          <li><a href="#" target="_blank">Tracking status</a></li>
         </ul>
       </div>
 
@@ -59,7 +64,7 @@
             <p style="margin: 0px;">Category</p>
           </button>
           <div class="category-header-dropdown-content">
-            <a href="all-product-page.html">Notebook</a>
+            <a href="#">Notebook</a>
             <a href="#">Smartphone</a>
             <a href="#">Tablet</a>
           </div>
@@ -82,151 +87,79 @@
   </header>
 
   <body>
-    <div class="slideshow-container">
-      <div class="mySlides_slideshow_beam fade">
-        <img
-          src="./Promotion_image/Promotion_img_1.jpg"
-          style="width:100%; height: 100%;"
-        />
-      </div>
-
-      <div class="mySlides_slideshow_beam fade">
-        <img src="./Promotion_image/Promotion_img_2.jpg" style="width:100%" />
-      </div>
-
-      <div class="mySlides_slideshow_beam fade">
-        <img src="./Promotion_image/Promotion_img_3.jpg" style="width:100%" />
-      </div>
-
-      <div class="mySlides_slideshow_beam fade">
-        <img src="./Promotion_image/Promotion_img_4.jpg" style="width:100%" />
-      </div>
-
-      <a
-        class="prev_slideshow_container"
-        onclick="plusSlides_slideshow_container(-1, 0)"
-        >&#10094;</a
-      >
-      <a
-        class="next_slideshow_container"
-        onclick="plusSlides_slideshow_container(1, 0)"
-        >&#10095;</a
-      >
-    </div>
-
-    <div class="banner-container">
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-01.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-02.jpg"
-        /></a>
-      </div>
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-03.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-04.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/notebook-top20-banner-400px-2.jpg"
-        /></a>
-      </div>
-
-      <div class="owl-item">
-        <a href="#"
-          ><img
-            src="https://www.bnn.in.th/pub/media/tigren/banners/banner-pro-400px-05.jpg"
-        /></a>
-      </div>
-    </div>
-
-    <h1 id="promotion">
-      <a
-        href="promotion-page.html"
-        style="text-decoration: none; color: black; cursor: pointer;"
-        >Promotion</a
-      >
-    </h1>
-    <div class="line"></div>
-    <br />
-    <div class="container-promotion" style="text-align: center;">
+    <div class="info-container">
       <div class="row">
-        <div class="slideshow-container-promotion">
-          <h3 class="promotion-tag">GOLDEN TIME</h3>
-          <div class="slides-promotion fade">
+        <div class="column">
+          <div>
+            <h5 style="text-align: left">DELL Laptop</h5>
             <img
-              src="Notebook_image/Apple/apple-2017.jpg"
-              class="image-promotion"
-              style="width: 80%; display: block;
-              margin-left: auto;
-              margin-right: auto;"
+              class="product-image"
+              src="Notebook_image/Dell/Dell-15.6-Inspiron-15-5000-Series-5584-Multi-Touch-Laptop.jpg"
             />
-          </div>
-          <div class="slides-promotion fade">
-            <img
-              src="Notebook_image/Apple/apple-2018-retina.jpg"
-              class="image-promotion"
-              style="width: 80%; display: block;
-              margin-left: auto;
-              margin-right: auto;"
-            />
-          </div>
-          <div class="slides-promotion fade">
-            <img
-              src="Notebook_image/Apple/apple-2018.jpg"
-              class="image-promotion"
-              style="width: 80%; display: block;
-              margin-left: auto;
-              margin-right: auto;"
-            />
-          </div>
-
-          <a class="prev-promotion" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next-promotion" onclick="plusSlides(1)">&#10095;</a>
-          <div class="container-dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
           </div>
         </div>
+        <div class="column">
+          <div class="notebook-info-box">
+            <h3 class="notebook-info">
+              Dell 15.6 Inspiron 15 5000 <br />Series 5584 Multi Touch Laptop
+            </h3>
+            <hr />
+            <h6 style="font-weight: lighter; float: left; color: gray;">
+              DELL
+            </h6>
+            <h6 style="font-weight: lighter; float: right; color: gray;">
+              SKU W26601105WTHW10_3280_BK_W
+            </h6>
+            <br />
+            <br />
+            <h2 class="product-price" style="float: left; margin-left: -28px;">
+              ฿ 30000
+            </h2>
+            <h4
+              class="product-available"
+              style="float: right; color: green; margin-right: -150px;"
+            >
+              Available
+            </h4>
+            <br />
+            <br />
+            <br />
+            <h5 class="product-detail" style="font-weight: lighter;">
+              Dell Inspiron 22 3280-W26601105WTHW10 AIO คอมพิวเตอร์ All-in-One
+              สเปคคุ้มค่า ราคาไม่เกิน 10,000 บาท ดีไซน์เรียบง่าย
+              เข้ากับทุกสถานที่ทำงาน พร้อมใช้งานได้เลย Dell Inspiron 22 3277 AIO
+              มีหน้าจอ IPS Full HD 21.5 นิ้ว ภาพคมชัด สีสันสวยสมจริง
+              ใช้งานได้สบายตา พร้อมกล้อง Webcam แบบป๊อบอัพ ใช้ CPU Intel Pentium
+              Gold 5405U และ RAM DDR4 4GB ทำงานพื้นฐานได้สบายๆ มีการ์ดจอออนบอร์ด
+              เพียงพอต่อการแต่งภาพเล็กๆ น้อยๆ ได้ PC All-in-One อย่าง Dell
+              Inspiron 22 3277 ยังเหมาะกับการใช้งานเพื่อความบันเทิง
+              ด้วยระบบเสียง Dell's Cinema Sound ให้อรรถรสทางเสียงได้อย่างดี มี
+              Windows 10 ลิขสิทธิ์แท้ บริการ McAfee 15 เดือน พร้อมต่อการใช้งาน
+              มีประกัน Onsite 3 ปี
+            </h5>
 
-        <div class="column-right">
-          <img
-            src="Promotion_image/gaming-notebook-banner.jpg"
-            class="image-promotion"
-          />
-          <img
-            src="Promotion_image/surface-banner-hl-3.jpg"
-            class="image-promotion"
-          />
-          <img
-            src="Promotion_image/apple-shop-banner-aug.jpg"
-            class="image-promotion"
-            style="width: 82%;"
-          />
+            Amount:
+            <input
+              type="number"
+              id="product-amount"
+              value="1"
+              style="border-width: 1px;"
+            />
+
+            <button
+              type="submit"
+              class="add-cart-button"
+              style="margin-left: 10px;"
+            >
+              ADD TO CARD
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <h1 id="new-arrival">New Arrival</h1>
-    <div class="line"></div>
+    <h1 id="Recommended" style="margin-top: 50px;">Recommended</h1>
+    <hr style="border-width: 0.5px;" />
     <div class="new-arrival-container">
       <div class="card">
         <div class="owl-item">
@@ -246,7 +179,7 @@
 
       <div class="card">
         <div class="owl-item">
-          <a href="product-detail-page.html"
+          <a href="#"
             ><img
               src="Notebook_image/Dell/Dell-13.3-Inspiron-13-5000-Series-Multi-Touch-2-in-1-Notebook.jpg"
           /></a>
@@ -331,8 +264,8 @@
         </div>
       </div>
     </div>
+    <hr style="border-width: 0.5px;" />
   </body>
-
   <footer>
     <div class="footer-flex-container">
       <div class="footer-column1">
@@ -492,6 +425,6 @@
   </footer>
   <script
     type="text/javascript"
-    src="JavaScript/main-page-javascript.js"
+    src="JavaScript/product-detail-page.js"
   ></script>
 </html>
