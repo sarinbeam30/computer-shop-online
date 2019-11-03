@@ -1,27 +1,28 @@
-var slideIndex = 1;
-var myIndex = 0;
+//----------------------------- Function Promotion's slideshow --------------------------------------------
+var slideIndex_promotion = 1;
+var myIndex_promotion = 0;
 carousel_promotion();
-showSlides(slideIndex);
+showSlides_promotion(slideIndex_promotion);
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function plusSlides_promotion(n) {
+  showSlides_promotion((slideIndex_promotion += n));
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function currentSlide_promotion(n) {
+  showSlides_promotion((slideIndex_promotion = n));
 }
 
-function showSlides(n) {
+function showSlides_promotion(n) {
   var i;
   var slides = document.getElementsByClassName("slides-promotion");
   var dots = document.getElementsByClassName("dot");
 
 
   if (n > slides.length) {
-    slideIndex = 1;
+    slideIndex_promotion = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex_promotion = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -29,9 +30,10 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slideIndex_promotion - 1].style.display = "block";
+  dots[slideIndex_promotion - 1].className += " active";
 }
+
 function carousel_promotion() {
   var i;
   var x = document.getElementsByClassName("slides-promotion");
@@ -39,62 +41,69 @@ function carousel_promotion() {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
+  myIndex_promotion++;
+  if (myIndex_promotion > x.length) {
+    myIndex_promotion = 1;
   }
 
-  if(myIndex !== 0 ){
+  currentSlide_promotion(myIndex_promotion);
+
+  if(myIndex_promotion !== 0 ){
       
   }
   
-  x[myIndex - 1].style.display = "block";  
+  x[myIndex_promotion - 1].style.display = "block";  
   setTimeout(carousel_promotion, 3000);
 }
 
-
-var slideIndex_slideshow_container = [1, 1];
-var slideId = ["mySlides_slideshow_beam"];
-var myIndex = 0;
-carousel();
-showSlides_slideshow_beam(1, 0);
-showSlides_slideshow_beam(1, 1);
-function plusSlides_slideshow_container(n, no) {
-  showSlides_slideshow_beam(
-    (slideIndex_slideshow_container[no] += n),
+//----------------------------- Function Advertisment's slideshow --------------------------------------------
+var slideIndex_slideshow_container_advertisement = [1, 1];
+var slideId_advertisment = ["mySlides_slideshow_advertisement"];
+var myIndex_slideshow_advertisment = 0;
+carousel_advertisment();
+slideshow_advertisement(1, 0);
+slideshow_advertisement(1, 1);
+function plusSlides_slideshow_container_advertisement(n, no) {
+  slideshow_advertisement(
+    (slideIndex_slideshow_container_advertisement[no] += n),
     no
   );
 }
-function showSlides_slideshow_beam(n, no) {
+function slideshow_advertisement(n, no) {
   var i;
-  var x = document.getElementsByClassName(slideId[no]);
+  var x = document.getElementsByClassName(slideId_advertisment[no]);
   if (n > x.length) {
-    slideIndex_slideshow_container[no] = 1;
+    slideIndex_slideshow_container_advertisement[no] = 1;
   }
   if (n < 1) {
-    slideIndex_slideshow_container[no] = x.length;
+    slideIndex_slideshow_container_advertisement[no] = x.length;
   }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
 
   if (no !== 1) {
-    x[slideIndex_slideshow_container[no] - 1].style.display = "block";
+    x[slideIndex_slideshow_container_advertisement[no] - 1].style.display = "block";
   }
 }
-function carousel() {
+function carousel_advertisment() {
   var i;
-  var x = document.getElementsByClassName("mySlides_slideshow_beam");
+  var x = document.getElementsByClassName("mySlides_slideshow_advertisement");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
+  myIndex_slideshow_advertisment ++;
+  if (myIndex_slideshow_advertisment > x.length) {
+    myIndex_slideshow_advertisment = 1;
   }
-  x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 3000);
+
+  console.log("MY Index : " + myIndex_slideshow_advertisment);
+
+  x[myIndex_slideshow_advertisment - 1].style.display = "block";
+  setTimeout(carousel_advertisment, 3000);
 }
+
+
 
 //----------------------------- Function Hide Menu on Scroll --------------------------------------------
 var prevScrollpos = window.pageYOffset;

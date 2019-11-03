@@ -89,3 +89,20 @@ function promotion_slider_showSlides(n) {
   slides[slideIndex_promotion_image_slider-1].style.display = "block";  
   dots[slideIndex_promotion_image_slider-1].className += " active";
 }
+
+//----------------------------- Function side-nav --------------------------------------------------
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("filter-button").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0";
+  document.getElementById("filter-button").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+
+
+
+
