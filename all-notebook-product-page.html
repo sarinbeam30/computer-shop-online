@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Promotion page</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Notebook Product Page</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -12,142 +12,91 @@
     />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+      type="text/css"
+      href="./Stylesheets/all-notebook-product-page-style.css"
     />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="./Stylesheets/promotion-page-style.css"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
+  </head>
 
-    <!-- j-QUERY -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        var min_price, max_price;
-
-        $( function() {
-          $( "#slider-range" ).slider({
-            range: true,
-            min: 0,
-            max: 500,
-            values: [ 75, 300 ],
-            slide: function( event, ui ) {
-              $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            //   min_price = ui.values[0];
-            //   max_price = ui.values[1];
-
-            //   console.log("MIN-PRICE_INSIDE :" + min_price);
-            //   console.log("MAX-PRICE_INSIDE :" + max_price);
-            }
-          });
-          $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        } );
-
-    </script>
-
-    <script>
-        var min_price, max_price;
-
-        $( function() {
-          $( ".block-content-mobile-version > .sidenav > .collapsible-content > .left-slidecontainer > #slider-range" ).slider({
-            range: true,
-            min: 0,
-            max: 500,
-            values: [ 75, 300 ],
-            slide: function( event, ui ) {
-              $( ".block-content-mobile-version > .sidenav > .collapsible-content > .left-slidecontainer > price-amount-input" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-              min_price = ui.values[0];
-              max_price = ui.values[1];
-
-              console.log("MIN-PRICE_INSIDE :" + min_price);
-              console.log("MAX-PRICE_INSIDE :" + max_price);
-            }
-          });
-          $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        } );
-    </script>
-</head>
-
-<header class="page-header">
+  <header class="page-header">
     <div class="panel wrapper">
-        <div class="panel header" id="panel-header-hide-menu-on-scroll">
+      <div class="panel header" id="panel-header-hide-menu-on-scroll">
         <div class="header-top-links">
-            <ul>
-            <li>
-                <a
+          <ul>
+            <!-- <li>
+              <a
                 href="#"
                 target="_blank"
                 style="text-decoration: none; color: black;"
                 >Computer store</a
-                >
-            </li>
-            </ul>
+              >
+            </li> -->
+          </ul>
         </div>
         <ul class="header links">
-            <li><a href="login-page.html">Login</a></li>
-            <li><a href="register-page.html">Register</a></li>
-            <li><a href="#" target="_blank">Tracking status</a></li>
+          <li><a href="login-page.html">Login</a></li>
+          <li><a href="register-page.html">Register</a></li>
+          <!-- <li><a href="#" target="_blank">Tracking status</a></li> -->
         </ul>
-        </div>
+      </div>
 
-        <div class="header-sticky" id="header-sticky">
+      <div class="header-sticky" id="header-sticky">
         <div class="icon-logo-header left">
-            <a href="main.html">
+          <a href="main.html">
             <img
-                alt="icon"
-                src="./Icon_image/laptop.png"
-                width="100"
-                height="45"
+              alt="icon"
+              src="./Icon_image/laptop.png"
+              width="100"
+              height="45"
             />
-            </a>
+          </a>
         </div>
 
         <div class="category-header left">
-            <button class="category-header-dropbtn">
+          <button class="category-header-dropbtn">
             <i
-                class="fas fa-bars"
-                style="padding-right: 8px; margin-top: 3.20px;"
+              class="fas fa-bars"
+              style="padding-right: 8px; margin-top: 3.20px;"
             ></i>
             <p style="margin: 0px;">Category</p>
-            </button>
-            <div class="category-header-dropdown-content">
+          </button>
+          <div class="category-header-dropdown-content">
             <a href="#">Notebook</a>
             <a href="#">Smartphone</a>
             <a href="#">Tablet</a>
-            </div>
+          </div>
         </div>
 
-        <div class="showcart-header right">
-            <i class="fas fa-shopping-cart"></i>
+        
+        <div class="showcart-header right" id = "showcart">
+          <i class="fas fa-shopping-cart" ><a href=""></a></i>
         </div>
-        <div class="user-header right">
-            <i class="fas fa-user"></i>
-        </div>
+        <!-- <div class="user-header right">
+          <i class="fas fa-user"></i>
+        </div> -->
         <div class="search-container right">
-            <form action="">
+          <form action="#new-arrival">
             <input type="text" placeholder="Search..." name="search" />
             <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+          </form>
         </div>
-        </div>
+      </div>
     </div>
-</header>
-<body>
-    
+  </header>
+
+  <body>
     <breadcrumbs class="breadcrumbs">
-        <ul class="items" style="list-style: none;">
-            <li class="item-Home">
-            <a href="main.html" title="main" style="text-decoration: none; color: black;">Home</a>
-            </li>
-            <li class="item-Promotion" style="margin-left: 5px;">
-            <strong>Promotion</strong>
-            </li>
-        </ul>
+      <ul class="items" style="list-style: none;">
+          <li class="item-Home">
+          <a href="main.html" title="main" style="text-decoration: none; color: black;">Home</a>
+          </li>
+          <li class="item-Notebook" style="margin-left: 5px;">
+          <strong>Notebook</strong>
+          </li>
+      </ul>
     </breadcrumbs>
 
     <!-- left-navbar -->
@@ -248,7 +197,7 @@
 
         <div class="column-main column">
             <div class="page-title">
-              <h1>Promotion</h1>
+              <h1>Notebook</h1>
             </div>
 
             <div class="toolbar-promotion-product-list">
@@ -322,16 +271,7 @@
                                 </div>
                                 <div class="product-item-price-box">
                                     <span class="item-price-box-row-1">
-                                        <span class="special-price">฿39,900</span>
-                                        <span class="old-price" style="padding-top: 3px;">฿49,900</span>
-                                    </span>
-                                    <span class="save-price item-price-box-row-2">
-                                        <span class="price-label" style="margin-right: 8px;">
-                                            Save:
-                                        </span>
-                                        <span class="price">
-                                            ฿10,000
-                                        </span>
+                                        <span class="normal-price">฿39,900</span>
                                     </span>
                                 </div>
 
@@ -394,16 +334,7 @@
                                 </div>
                                 <div class="product-item-price-box">
                                     <span class="item-price-box-row-1">
-                                        <span class="special-price">฿38,900</span>
-                                        <span class="old-price" style="padding-top: 3px;">฿47,900</span>
-                                    </span>
-                                    <span class="save-price item-price-box-row-2">
-                                        <span class="price-label" style="margin-right: 8px;">
-                                            Save:
-                                        </span>
-                                        <span class="price">
-                                            ฿9,000
-                                        </span>
+                                        <span class="normal-price">฿38,900</span>                  
                                     </span>
                                 </div>
 
@@ -466,17 +397,8 @@
                                 </div>
                                 <div class="product-item-price-box">
                                     <span class="item-price-box-row-1">
-                                        <span class="special-price">฿69,990</span>
-                                        <span class="old-price" style="padding-top: 3px;">฿79,990</span>
-                                    </span>
-                                    <span class="save-price item-price-box-row-2">
-                                        <span class="price-label" style="margin-right: 8px;">
-                                            Save:
-                                        </span>
-                                        <span class="price">
-                                            ฿10,000
-                                        </span>
-                                    </span>
+                                        <span class="normal-price">฿69,990</span>
+                                    </span>                                    
                                 </div>
 
                                 <div class="add-to-cart-button">
@@ -538,17 +460,8 @@
                                 </div>
                                 <div class="product-item-price-box">
                                     <span class="item-price-box-row-1">
-                                        <span class="special-price">฿49,990</span>
-                                        <span class="old-price" style="padding-top: 3px;">฿59,990</span>
-                                    </span>
-                                    <span class="save-price item-price-box-row-2">
-                                        <span class="price-label" style="margin-right: 8px;">
-                                            Save:
-                                        </span>
-                                        <span class="price">
-                                            ฿10,000
-                                        </span>
-                                    </span>
+                                        <span class="normal-price">฿49,990</span>
+                                    </span>                                    
                                 </div>
 
                                 <div class="add-to-cart-button">
@@ -569,167 +482,165 @@
         </div>
 
     </div>
-</body>
-<footer>
+
+  </body>
+
+  <footer>
     <div class="footer-flex-container">
-        <div class="footer-column1">
+      <div class="footer-column1">
         <ul style="list-style-type: none;">
-            <li><strong>About Us</strong></li>
-            <li><a href="#">Who we are</a></li>
-            <li><a href="#">Terms and condition</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
+          <li><strong>About Us</strong></li>
+          <li><a href="#">Who we are</a></li>
+          <li><a href="#">Terms and condition</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
-        </div>
+      </div>
 
-        <div class="footer-column2">
+      <div class="footer-column2">
         <ul style="list-style-type: none;">
-            <li><strong>Customer Services</strong></li>
-            <li><a href="#">Check Shipping Status</a></li>
-            <li><a href="#">How to register</a></li>
-            <li><a href="#">How to order</a></li>
-            <li><a href="#">Payment Methods</a></li>
-            <li><a href="#">Shipping</a></li>
+          <li><strong>Customer Services</strong></li>
+          <li><a href="#">Check Shipping Status</a></li>
+          <li><a href="#">How to register</a></li>
+          <li><a href="#">How to order</a></li>
+          <li><a href="#">Payment Methods</a></li>
+          <li><a href="#">Shipping</a></li>
         </ul>
-        </div>
+      </div>
 
-        <div class="footer-column3">
+      <div class="footer-column3">
         <ul style="list-style-type: none;">
-            <li><strong>Customer Services</strong></li>
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Return</a></li>
-            <li><a href="#">Refunds</a></li>
-            <li><a href="#">How to Cancel</a></li>
-            <li><a href="#">Click and collect</a></li>
+          <li><strong>Customer Services</strong></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Return</a></li>
+          <li><a href="#">Refunds</a></li>
+          <li><a href="#">How to Cancel</a></li>
+          <li><a href="#">Click and collect</a></li>
         </ul>
-        </div>
+      </div>
 
-        <div class="footer-column4">
+      <div class="footer-column4">
         <ul style="list-style-type: none;">
-            <li><strong>Get Our News</strong></li>
-            <li>
+          <li><strong>Get Our News</strong></li>
+          <li>
             <a href="#"
-                >Subscribe to our news today to get exclusive privileges</a
+              >Subscribe to our news today to get exclusive privileges</a
             >
-            </li>
+          </li>
 
-            <div class="subscribe-footer">
+          <div class="subscribe-footer">
             <form action="">
-                <input
+              <input
                 type="text"
                 placeholder="Enter your email address"
                 name="email-subscribe"
                 class="custom-input-subscribe"
-                />
-                <button type="submit" class="custom-button-subscribe">
+              />
+              <button type="submit" class="custom-button-subscribe">
                 <span>SUBSCRIBE</span>
-                </button>
+              </button>
             </form>
-            </div>
+          </div>
 
-            <div class="social-footer">
+          <div class="social-footer">
             <h4>Stay Connected</h4>
             <div class="fb-connect">
-                <a href="#"
+              <a href="#"
                 ><img
-                    src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
-                /></a>
-                <p style="margin-top: 0;">
+                  src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
+              /></a>
+              <p style="margin-top: 0;">
                 <span>
-                    Find us<br />on<a
+                  Find us<br />on<a
                     href="#"
                     style="text-decoration: none; margin-left: 4px; color: blue;"
                     >Facebook</a
-                    >
+                  >
                 </span>
-                </p>
+              </p>
             </div>
-            </div>
+          </div>
         </ul>
-        </div>
+      </div>
     </div>
 
     <div class="footer-flex-container-mobile-version">
-        <button class="footer-collapsible-button">About Us</button>
-        <div class="footer-collapsible-content">
+      <button class="footer-collapsible-button">About Us</button>
+      <div class="footer-collapsible-content">
         <ul style="list-style-type: none;">
-            <li><a href="#">Who we are</a></li>
-            <li><a href="#">Terms and condition</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Who we are</a></li>
+          <li><a href="#">Terms and condition</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
-        </div>
+      </div>
 
-        <button class="footer-collapsible-button">Customer Services</button>
-        <div class="footer-collapsible-content">
+      <button class="footer-collapsible-button">Customer Services</button>
+      <div class="footer-collapsible-content">
         <ul style="list-style-type: none;">
-            <li><a href="#">Check Shipping Status</a></li>
-            <li><a href="#">How to register</a></li>
-            <li><a href="#">How to order</a></li>
-            <li><a href="#">Payment Methods</a></li>
-            <li><a href="#">Shipping</a></li>
+          <li><a href="#">Check Shipping Status</a></li>
+          <li><a href="#">How to register</a></li>
+          <li><a href="#">How to order</a></li>
+          <li><a href="#">Payment Methods</a></li>
+          <li><a href="#">Shipping</a></li>
         </ul>
-        </div>
+      </div>
 
-        <button class="footer-collapsible-button">Customer Services</button>
-        <div class="footer-collapsible-content">
+      <button class="footer-collapsible-button">Customer Services</button>
+      <div class="footer-collapsible-content">
         <ul style="list-style-type: none;">
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Return</a></li>
-            <li><a href="#">Refunds</a></li>
-            <li><a href="#">How to Cancel</a></li>
-            <li><a href="#">Click and collect</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Return</a></li>
+          <li><a href="#">Refunds</a></li>
+          <li><a href="#">How to Cancel</a></li>
+          <li><a href="#">Click and collect</a></li>
         </ul>
-        </div>
+      </div>
 
-        <div class="subscribe-form-and-stay-connected">
+      <div class="subscribe-form-and-stay-connected">
         <ul style="list-style-type: none;">
-            <li><strong>Get Our News</strong></li>
-            <li>
+          <li><strong>Get Our News</strong></li>
+          <li>
             <a href="#"
-                >Subscribe to our news today to get exclusive privileges</a
+              >Subscribe to our news today to get exclusive privileges</a
             >
-            </li>
+          </li>
 
-            <div class="subscribe-footer">
+          <div class="subscribe-footer">
             <form action="">
-                <input
+              <input
                 type="text"
                 placeholder="Enter your email address"
                 name="email-subscribe"
                 class="custom-input-subscribe"
-                />
-                <button type="submit" class="custom-button-subscribe">
+              />
+              <button type="submit" class="custom-button-subscribe">
                 <span>SUBSCRIBE</span>
-                </button>
+              </button>
             </form>
-            </div>
+          </div>
 
-            <div class="social-footer">
+          <div class="social-footer">
             <h4>Stay Connected</h4>
             <div class="fb-connect">
-                <a href="#"
+              <a href="#"
                 ><img
-                    src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
-                /></a>
-                <p style="margin-top: 0;">
+                  src="https://www.bnn.in.th/pub/media/wysiwyg/new-fb-logo.png"
+              /></a>
+              <p style="margin-top: 0;">
                 <span>
-                    Find us<br />on<a
+                  Find us<br />on<a
                     href="#"
                     style="text-decoration: none; margin-left: 4px; color: blue;"
                     >Facebook</a
-                    >
+                  >
                 </span>
-                </p>
+              </p>
             </div>
-            </div>
+          </div>
         </ul>
-        </div>
+      </div>
     </div>
-</footer>
-
-<script
-    type="text/javascript"
-    src="JavaScript/promotion-page-javascript.js"
-></script>
+  </footer>
+  <script type="text/javascript" src="JavaScript/all-notebook-product-page.js"></script>
 </html>

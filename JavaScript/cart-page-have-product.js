@@ -1,7 +1,6 @@
 /* ********************** ITEM-QUANTITY *************************** */
 
 var item_quantity_value = 0;
-
 function increase_Item_Quantity() {
     var item_quantity_value = parseInt(document.getElementsByClassName('number-item-quantity').item_quantity_value, 10);
     item_quantity_value = isNaN(item_quantity_value) ? 0 : item_quantity_value;

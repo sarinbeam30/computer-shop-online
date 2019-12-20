@@ -637,6 +637,7 @@ body {
   border-radius: 11px;
   border: 1px solid #4a4a4a;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .card > .owl-item > .add-to-cart-button button:hover {
